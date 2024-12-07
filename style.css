@@ -1,83 +1,121 @@
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  
-  body, html {
-    height: 100vh;
-    width: 100vw;
-    font-family: "Sixtyfour Convergence", sans-serif;    
-    overflow: hidden;
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: "Sixtyfour Convergence", sans-serif;  
+  overflow: hidden;
+}
 
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
-    
-  }
+header {
+  text-align: center;
+  margin-top: 2rem;
+}
 
-  
-  canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1; /* Background */
-  }
-  
-  header {
-    text-align: center;
-    margin-top: 2rem;
-  }
-  
+h1 {
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 2rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 15px;
+  border-radius: 8px;
+  width: 150px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+  text-decoration: none;
+  color: black;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+footer {
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
   h1 {
-    font-size: 3rem;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
   }
-  
-  .portfolio {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 5rem;
-  }
-  
+
   .project-card {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 15px;
-    border-radius: 8px;
-    width: 200px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: 0.3s ease;
-    text-decoration: none;
-    color: black;
+    width: 120px;
+    padding: 10px;
   }
-  
-  .project-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
+
   .project-card h3 {
-    margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
-  
-  .project-card:hover {
-    transform: scale(1.1);
-    background: rgba(255, 255, 255, 0.95);
+
+  .portfolio {
+    padding: 1rem;
+    gap: 15px;
   }
-  
-  footer {
-    color: white;
-    text-align: center;
-    position: absolute;
-    bottom: 1rem;
-    width: 100%;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
   }
+
+  .project-card {
+    width: 100px;
+    padding: 8px;
+  }
+
+  .project-card h3 {
+    font-size: 0.8rem;
+  }
+
+  .portfolio {
+    padding: 0.5rem;
+    gap: 10px;
+  }
+}
+
   
